@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     private void MovePlayer()
     {
         Vector3 direction = new Vector3(horizontalMovement, 0, verticalMovement);
-        GetComponent<Rigidbody>().AddForce(direction * force);
+        GetComponent<Rigidbody>().AddForce(direction.normalized * force);
     }
 
     // Gets the user key input and uses it to assign movement directions
